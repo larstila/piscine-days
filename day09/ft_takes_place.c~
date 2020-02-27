@@ -1,0 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_takes_place.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkettune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/13 17:44:02 by lkettune          #+#    #+#             */
+/*   Updated: 2020/02/13 18:00:21 by lkettune         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+void ft_takes_place(int hour)
+{
+	int i;
+	int j;
+	char a;
+	char b;
+
+	a = 0;
+	b = 0;
+	a = 'A';
+	b = 'A';
+	
+	if (hour < 2300 && hour >= 1300)
+	{
+		i = hour / 100 - 12;
+		j = i + 1;
+		a = 'P';
+		b = 'P';
+	}
+	printf("%s", "THE FOLLOWING TAKES PLACE BETWEEN "); 
+	printf("%d.00 %c.M. AND %d %c.M.", i, j, a, b);
+}
+
+int main(void)
+{
+	ft_takes_place(1450);
+}

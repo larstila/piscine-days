@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_param_to_tab.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkettune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/14 09:40:59 by lkettune          #+#    #+#             */
+/*   Updated: 2020/02/14 10:32:51 by lkettune         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_stock.h"
+
+
+struct s_stock_par *ft_param_to_tab(int ac, char **av)
+{
+	int i;
+	int k;
+	t_stock_par a;
+
+	a.tab = ft_split_whitespaces(av);
+
+	return (a)
+}
+
+
+char	*ft_find_word(char *str, int *i, int len)
+{
+	char	*ret;
+	int		j;
+
+	ret = (char*)malloc(sizeof(ret) * (len + 1));
+	j = 0;
+	while ((str[*i] == '\n' || str[*i] == ' ' || str[*i] == '\t'))
+	{
+		*i = *i + 1;
+	}
+	while ((str[*i] != '\n' && str[*i] != ' ' && str[*i] != '\t'))
+	{
+		ret[j] = str[*i];
+		j++;
+		*i = *i + 1;
+	}
+	ret[j] = '\0';
+	return (ret);
+}

@@ -1,0 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_list_last.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkettune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/18 19:28:03 by lkettune          #+#    #+#             */
+/*   Updated: 2020/02/18 19:59:18 by lkettune         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_list.h"
+
+t_list	*ft_list_last(t_list *begin_list)
+{
+	t_list	*last;
+
+	if (begin_list == 0)
+		return (0);
+	last = begin_list;
+	while (last->next != 0)
+		last = last->next;
+	return (last);
+}

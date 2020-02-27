@@ -1,0 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkettune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/07 10:22:49 by lkettune          #+#    #+#             */
+/*   Updated: 2020/02/07 10:27:08 by lkettune         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int 	strlen(char *str)
+{
+	int len;
+
+	while(str[len] != '\0') 
+	{
+		len++
+	}
+	return len;
+}
+
+int main(void)
+{
+	char *str;
+
+	str = "testi";
+	ft_putchar(ft_strlen(str) + '0');
+	return (0);
+}

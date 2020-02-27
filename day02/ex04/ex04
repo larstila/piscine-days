@@ -1,0 +1,56 @@
+xs********************************************************************************
+                                                                                
+                                                          :::      ::::::::     
+     ex04                                               :+:      :+:    :+:     
+                                                      +:+ +:+         +:+       
+     By: lkettune <marvin@42.fr>                    +#+  +:+       +#+          
+                                                  +#+#+#+#+#+   +#+             
+     Created: 2020/02/05 20:04:54 by lkettune          #+#    #+#               
+     Updated: 2020/02/05 20:38:44 by lkettune         ###   ########.fr         
+                                                                                
+********************************************************************************
+
+#define <unistd.h>
+
+void    ft_putchar(char c)
+{
+    write(1, &c, 1);
+    return ;
+}
+
+void 	ft_print_comb(void)
+{
+
+	char i;
+	char j;
+	char k;
+	i = 0;
+	j = 1;
+	k = 2;
+	while (i <= 7)
+	{
+		while (j <= 8) 
+		{
+			while (k <= 9)
+			{
+				ft_putchar(i);
+				ft_putchar(j);
+				ft_putchar(k);
+				ft_putchar(,);
+				ft_putchar('\n');
+				k ++;
+			}
+			j ++;
+		}
+		i++;
+	}
+}
+	return ;
+}
+
+int 	main(void)
+{
+	ft_print_comb();
+	return ;
+}
+					

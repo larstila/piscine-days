@@ -1,0 +1,13 @@
+cat /etc/passwd |
+grep -v "#" |
+cut -d : -f 1 |
+awk 'NR%2==0' |
+rev |
+sort -r |
+grep "^[$FT_LINE1-$FT_LINE2]" |
+tr '\n' ',' |
+sed 's|,|, |g' |
+rev |
+sed "s| ,|.|" |
+rev |
+sed "s|$|.|g";

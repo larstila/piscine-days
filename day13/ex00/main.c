@@ -1,0 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkettune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/21 09:50:52 by lkettune          #+#    #+#             */
+/*   Updated: 2020/02/22 11:07:28 by lkettune         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_btree.h"
+void    print_btree(t_btree *parent, int level);
+
+int	main(void)
+{
+	t_btree *a;
+	t_btree *b;
+//	t_btree *c;
+//   t_btree *d;
+
+	a = btree_create_node((void *)2);
+	b = btree_create_node((void *)4);
+	a->right = b;
+	a->left = btree_create_node((void *)6);
+	b->left = btree_create_node((void *)8);
+
+	print_btree(a, 0);
+	return (0);
+}

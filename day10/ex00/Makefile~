@@ -1,0 +1,38 @@
+#******************************************************************************#
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lkettune <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/02/17 14:33:10 by lkettune          #+#    #+#              #
+#    Updated: 2020/02/17 16:21:52 by lkettune         ###   ########.fr        #
+#                                                                              #
+#******************************************************************************#
+
+SRC_DIR := srcs
+HDR_DIR := includes
+SRC = $(SRC_DIR)/ft_putchar.c $(SRC_DIR)/ft_swap.c $(SRC_DIR)/ft_putstr.c \
+	$(SRC_DIR)/ft_strlen.c $(SRC_DIR)/ft_strcmp.c
+HDR = $(HDR_DIR)/unistd.h
+OBJ = ft_putchar.o ft_swap.o ft_putstr.o ft_strlen.o ft_strcmp.o
+
+NAME = libft.a
+
+all: $(NAME)
+
+$(NAME): obj 
+	ar rc $@ $(OBJ)
+	ranlib $@
+
+obj: $(HDR)
+	gcc -c $(SRC) 
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean
+	make

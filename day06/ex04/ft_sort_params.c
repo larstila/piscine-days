@@ -1,0 +1,74 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkettune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/11 19:32:50 by lkettune          #+#    #+#             */
+/*   Updated: 2020/02/12 20:40:46 by lkettune         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <stdio.h>
+
+void	ft_putchar(char c);
+void	ft_swap(char *str1, char *str2);
+void	ft_quicksort(int low, int high, char **strarray);
+int		ft_partition(int low, int high, char **strarray);
+
+int		main(int argc, char **argv)
+{
+
+	int i;
+	int arg;
+	int random;
+
+	random = argc / 2;
+	arg = 1;	
+	ft_quicksort(arg, argc, argv);
+	while (arg < argc)
+	{
+		i = 0;
+		while (argv[arg][i] != '\0')
+		{
+			ft_putchar(argv[arg][i]);
+			i++;
+		}
+		ft_putchar('\n');
+		arg++;
+	}
+	return (0);
+}
+
+void	ft_quicksort(int low, int high, char **strarray)
+{
+	int pi;
+	
+	if (low < high)
+	{
+		pi = strarray[0][0]; //ft_partition(low, high, strarray);
+		// ft_quicksort(low, pi - 1, strarray);
+		// ft_quicksort(pi + 1, high, strarray);
+	}
+	return ;
+}
+
+int		ft_partition(int low, int high, char **strarray)
+{	
+	int i;
+	int j;
+	printf("%s", "testi");
+	i = low;
+	j = low;
+	while (j < (high - 1))
+	{
+		if (strarray[high][0] > strarray[j][0])
+		{
+			i++;
+			ft_swap(strarray[j], strarray[i]);
+		}
+		j++;
+	}
+	return (i + 1);
+}
+

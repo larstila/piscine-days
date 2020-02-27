@@ -1,0 +1,83 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_wordtab.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkettune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/18 10:34:41 by lkettune          #+#    #+#             */
+/*   Updated: 2020/02/18 13:55:27 by lkettune         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <stdio.h>
+
+int		ft_strcmp(char *str1, char *str2);
+
+void	ft_sort_wordtab(char **tab)
+{
+	int i;
+	int len;
+	int sorted;
+	char *temp;
+
+	i = 0;
+	len = 0;
+	while (tab[i++] != 0)
+		len++;
+	sorted = 0;
+	while (!sorted)
+	{
+		sorted = 1;
+		i = 0;
+		while (i < (len - 2x))
+		{
+			printf("%s\n", "testi1");
+			if (ft_strcmp(tab[i], tab[i + 1]) < 0)
+			{
+				printf("%s\n", "testi2");
+				temp = tab[i];
+				tab[i] = tab[i + 1];
+				tab[i + 1] = temp;
+				sorted = 0;
+			}
+			i++;
+		}
+	}
+	i = 0;
+    while(tab[i])
+    {
+        printf("%s\n", tab[i]);
+        i++;
+    }
+
+}
+
+int		ft_strcmp(char *str1, char *str2)
+{
+	int i;
+
+	i = 0;
+	while (str1[i] == str2[i])
+	{
+		if (str1[i] == '\0' && str2[i] == '\0')
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (str1[i] - str2[i]);
+}
+
+
+int	 main(void)
+{
+	char *tab[4];
+	int i = 0;
+
+	tab[0] = "2";
+	tab[1] = "4";
+	tab[2] = "1";
+	tab[3] = 0;
+	ft_sort_wordtab(tab);
+
+}

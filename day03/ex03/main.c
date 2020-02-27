@@ -1,0 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lkettune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/06 15:14:18 by lkettune          #+#    #+#             */
+/*   Updated: 2020/02/06 16:10:36 by lkettune         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_div_mod(int a, int b, int *div, int *mod);
+
+void	ft_putchar(char c);
+
+void 	ft_putnbr(int i);
+
+
+int main () 
+{
+	int a;
+	int b;
+	int *div;
+	int *mod;
+
+	a = 5;
+	b = 2;
+	*div = 0;
+	*mod = 0;
+
+	ft_div_mod(a, b, *div, *mod);
+	ft_putnbr(*div);
+	ft_putchar('\n'); 
+	ft_putnbr(*mod);
+	return (0);
+}
