@@ -1,0 +1,2 @@
+krbtgt/HIVE.FI@HIVE.FI
+host/vogsphere.hive.fi@HIVE.FI

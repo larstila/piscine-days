@@ -1,0 +1,6 @@
+Credentials cache: API:C921923D-65D0-41A4-961D-2ADC0A521654
+        Principal: lkettune@HIVE.FI
+
+  Issued                Expires               Principal
+Feb  3 15:36:31 2020  Feb  4 01:36:31 2020  krbtgt/HIVE.FI@HIVE.FI
+Feb  3 16:05:25 2020  Feb  4 01:36:31 2020  host/vogsphere.hive.fi@HIVE.FI
